@@ -1,0 +1,304 @@
+#root,
+.app-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  background: var(--ux4g-bg-neutral-elevated);
+}
+
+.site-header__inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-block: var(--ux4g-padding-s);
+}
+
+.brand-lockup,
+.brand-copy {
+  display: grid;
+}
+
+.brand-lockup {
+  align-items: center;
+  color: var(--ux4g-text-neutral-primary);
+  grid-template-columns: auto 1fr;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-size: var(--ux4g-font-size-24);
+  font-weight: var(--ux4g-font-weight-bold);
+  line-height: 1.15;
+}
+
+.brand-caption {
+  color: var(--ux4g-text-neutral-secondary);
+  font-size: var(--ux4g-font-size-12);
+}
+
+.demo-pill {
+  white-space: nowrap;
+}
+
+.desktop-navigation {
+  align-items: stretch;
+  border-bottom: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  display: none;
+}
+
+.navigation-link {
+  align-items: center;
+  color: var(--ux4g-text-neutral-secondary);
+  display: flex;
+  padding: var(--ux4g-padding-s) var(--ux4g-padding-m);
+  text-decoration: none;
+}
+
+.navigation-link:hover,
+.navigation-link:focus-visible,
+.navigation-link.is-active {
+  color: var(--ux4g-text-brand-primary-default);
+  text-decoration: underline;
+  text-underline-offset: var(--ux4g-outline-offset-md);
+}
+
+.skip-link {
+  background: var(--ux4g-bg-neutral-elevated);
+  border: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  left: var(--ux4g-padding-m);
+  padding: var(--ux4g-padding-s);
+  position: absolute;
+  transform: translateY(-200%);
+  z-index: 20;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.app-main {
+  padding-block: var(--ux4g-padding-xl);
+  padding-bottom: calc(var(--ux4g-padding-4xl) + env(safe-area-inset-bottom));
+}
+
+.demo-disclosure {
+  margin: 0;
+}
+
+.backend-status {
+  align-items: center;
+  border: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ux4g-padding-s);
+  justify-content: space-between;
+  padding: var(--ux4g-padding-s) var(--ux4g-padding-m);
+}
+
+.ux4g-btn-md {
+  min-height: 44px;
+}
+
+.page-stack {
+  display: grid;
+}
+
+.narrow-page {
+  max-width: 52rem;
+}
+
+.page-heading,
+.intro-copy {
+  max-width: 52rem;
+}
+
+.intro-copy {
+  align-content: center;
+  min-height: 22rem;
+}
+
+.intro-copy h1 {
+  max-width: 18ch;
+}
+
+.intro-copy > p:not(.ux4g-label-m-strong),
+.page-heading > p:not(.ux4g-label-m-strong) {
+  max-width: 68ch;
+}
+
+.subdued-copy {
+  color: var(--ux4g-text-neutral-secondary);
+}
+
+.plain-list {
+  list-style: disc;
+  padding-inline-start: var(--ux4g-padding-xl);
+}
+
+.evidence-list {
+  list-style: none;
+  padding: 0;
+}
+
+.evidence-list li {
+  border-inline-start: var(--ux4g-border-width-md) solid var(--ux4g-border-color-neutral-strong);
+  padding-inline-start: var(--ux4g-padding-m);
+}
+
+.evidence-list p {
+  margin-block: var(--ux4g-padding-xs) 0;
+}
+
+.data-list {
+  list-style: none;
+  padding: 0;
+}
+
+.data-list li {
+  display: grid;
+  gap: var(--ux4g-padding-xs);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.data-list li + li {
+  border-block-start: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  padding-block-start: var(--ux4g-padding-m);
+}
+
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table-scroll .ux4g-table {
+  min-width: 42rem;
+}
+
+.purpose-explanations > div {
+  border-block-start: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  padding-block-start: var(--ux4g-padding-m);
+}
+
+.answer-row,
+.journey-nav,
+.purpose-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ux4g-padding-s);
+}
+
+.journey-nav {
+  justify-content: space-between;
+}
+
+.fact-group {
+  border: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  padding: var(--ux4g-padding-m);
+}
+
+.purpose-row {
+  justify-content: space-between;
+  min-height: 44px;
+  flex-wrap: nowrap;
+}
+
+.purpose-switch-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.purpose-switch-status {
+  margin-inline-start: auto;
+  white-space: nowrap;
+}
+
+/* UX4G v2.1 defaults the off track to neutral-subtle, a documented <3:1 boundary failure.
+   Keep its documented Switch geometry and add a theme-aware neutral-strong edge. */
+.purpose-switch-track {
+  border: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+}
+
+.site-footer {
+  color: var(--ux4g-text-neutral-secondary);
+  padding-block: var(--ux4g-padding-l);
+}
+
+.mobile-navigation {
+  background: var(--ux4g-bg-neutral-elevated);
+  border-top: var(--ux4g-border-width-sm) solid var(--ux4g-border-color-neutral-strong);
+  bottom: 0;
+  display: block;
+  inset-inline: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  z-index: 10;
+}
+
+.ux4g-navbar.ux4g-navbar-mobile.mobile-navigation {
+  /* UX4G reserves this modifier for a static dropdown menu (position:static!important);
+     this application uses it as the persistent four-section mobile navigation instead. */
+  position: fixed !important;
+}
+
+.household-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.mobile-navigation__links {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+}
+
+.mobile-navigation__link {
+  align-items: center;
+  color: var(--ux4g-text-neutral-secondary);
+  display: flex;
+  justify-content: center;
+  padding: var(--ux4g-padding-s) var(--ux4g-padding-2xs);
+  text-align: center;
+  text-decoration: none;
+  text-wrap: balance;
+  min-height: 46px;
+}
+
+.mobile-navigation__link.is-active {
+  color: var(--ux4g-text-brand-primary-default);
+  font-weight: var(--ux4g-font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: var(--ux4g-outline-offset-md);
+}
+
+.brand-lockup:focus-visible,
+.navigation-link:focus-visible,
+.mobile-navigation__link:focus-visible,
+.skip-link:focus-visible {
+  outline: var(--ux4g-outline-width-md) solid var(--ux4g-border-color-primary-strong);
+  outline-offset: var(--ux4g-outline-offset-sm);
+}
+
+@media (min-width: 64rem) {
+  .desktop-navigation {
+    display: flex;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  .app-main {
+    padding-bottom: var(--ux4g-padding-2xl);
+  }
+
+  .intro-copy {
+    min-height: 24rem;
+  }
+
+  .household-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
